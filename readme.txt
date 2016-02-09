@@ -1,4 +1,4 @@
-This GameEngine is a OpenSource.
+This GameEngine is an OpenSource.
 You can use it anyWay you want.
 All Scripts are defined as Unity-C#.
 
