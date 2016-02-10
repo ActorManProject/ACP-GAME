@@ -8,7 +8,7 @@ public class Characters : Things {
 	Characters()
 	{
 		health = 100;
-		shield = 20;
+		shield = 0;
 		move_speed = 1;
 	}
 
@@ -21,7 +21,25 @@ public class Characters : Things {
 	}
 	
 	// Update is called once per frame
-	void Update () {
-		
+	void Update()
+	{
+		Shield();
+		Death();
+	}
+
+	void Shield()
+	{
+		if(shield <= 0)
+		{
+			shield = 0;
+		}
+	}
+
+	void Death()
+	{
+		if(health <= 0 && shield <= 0)
+		{
+			Destroy(gameObject);
+		}
 	}
 }
