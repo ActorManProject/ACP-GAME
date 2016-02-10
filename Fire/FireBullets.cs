@@ -3,15 +3,15 @@ using System.Collections;
 
 public class FireBullets : MonoBehaviour {
 
-	private GameObject bullets;
-	private GameObject bulletsOnGame;
-	private GameObject Aim;
+	public GameObject bullets;
+	public GameObject bulletsOnGame;
+	public GameObject Aim;
 	private float nextfire = 0.0f;
 	private float firerate = 0.1f; // 발사 속도
 	
 	// Use this for initialization
 	void Start () {
-		bullets = Resources.Load("bullets") as GameObject;
+		bullets = Resources.Load("Prefeb/InGame/bullets") as GameObject;
 		Aim = GameObject.Find("Player/Aim");
 	}
 	
