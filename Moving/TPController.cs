@@ -50,7 +50,7 @@ public class TPController : MonoBehaviour {
 	{
 		tempVector = GetComponent<Rigidbody>().GetPointVelocity(transform.position) * Time.deltaTime * 1000;
 		GetComponent<Rigidbody>().AddForce (-tempVector.x, -tempVector.y, -tempVector.z);
-		GetComponent<Rigidbody>().AddForce (inputMovement.normalized * move_speed * 10000 * Time.deltaTime);
+		GetComponent<Rigidbody>().AddForce (inputMovement.normalized * move_speed * 5000 * Time.deltaTime);
 		transform.rotation = Quaternion.LookRotation(inputRotation);
 		transform.eulerAngles = new Vector3(0,transform.eulerAngles.y,0);
 		transform.position = new Vector3(transform.position.x,1f,transform.position.z);
@@ -61,4 +61,5 @@ public class TPController : MonoBehaviour {
 		objCamera.transform.position = new Vector3(transform.position.x,10,transform.position.z);
 		objCamera.transform.eulerAngles = new Vector3(90,0,0);
 	}
+
 }

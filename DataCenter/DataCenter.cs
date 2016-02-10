@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 public class DataCenter : MonoBehaviour {
 
-	private List<Things> C_List = new List<Things>(); 
+	private List<Things> C_List = new List<Things>(); // Character List
 	private int Player_Length;
 
 	// Use this for initialization
@@ -12,11 +12,6 @@ public class DataCenter : MonoBehaviour {
 		Player_Length = 0;
 	}
 	
-	// Update is called once per time
-	void FixedUpdate() {
-		
-	}
-
 	// Update is called once per frame
 	void Update () {
 		
@@ -67,5 +62,15 @@ public class DataCenter : MonoBehaviour {
 	public void Delete_List(int id)
 	{
 		C_List.RemoveAt(id);
+	}
+
+	public int Get_Length()
+	{
+		return Player_Length;
+	}
+
+	public Things Get_Value(int index)
+	{
+		return C_List[index];
 	}
 }
