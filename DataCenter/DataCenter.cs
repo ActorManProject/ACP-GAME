@@ -54,6 +54,7 @@ public class DataCenter : MonoBehaviour {
 		}
 		else if(Player_Length > C_List.Count)
 		{
+			//Reset Id
 			Debug.Log("Delete Obj");
 			var i = 0;
 			foreach(var x in C_List)
