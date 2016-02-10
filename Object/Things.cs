@@ -26,7 +26,15 @@ abstract public class Things : MonoBehaviour {
 		}			
 	}
 
-	public void Set_Id(int _id) { id = _id; }
+	public virtual void Set_Id(int _id) { id = _id; }
 
-	public int Get_Id() { return id; }
+	public virtual int Get_Id() { return id; }
+
+	void OnCollisionEnter(Collision collision)
+	{
+		if(collision.gameObject.tag == "Bullets" ) // bumped bullets
+		{
+			health -= collision.gameObject.GetComponent<BulletsStats>().damage; // get damage
+		}
+	}
 }
