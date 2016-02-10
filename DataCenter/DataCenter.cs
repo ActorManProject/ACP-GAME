@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 public class DataCenter : MonoBehaviour {
 
-	public List<Things> C_List = new List<Things>(); 
+	private List<Things> C_List = new List<Things>(); 
 	private int Player_Length;
 
 	// Use this for initialization
