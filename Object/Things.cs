@@ -19,11 +19,11 @@ abstract public class Things : MonoBehaviour {
 	void OnDestroy() 
 	{	
 		// when destroy, remove missing pointer
-		if(health <= 0) // 정삭적인 죽음에 대해서만
+		if(health <= 0 && gameObject.tag != "Player") // 정삭적인 죽음에 대해서만
 		{
 			var DataCenter = GameObject.Find("DataCenter");
 			DataCenter.GetComponent<DataCenter>().Delete_List(id);
-		}			
+		}
 	}
 
 	public virtual void Set_Id(int _id) { id = _id; }
